@@ -44,7 +44,7 @@ func main() {
 
 	l, err := net.Listen("tcp", config.SERVICE_USER_PORT)
 	if err != nil {
-		log.Fatalf("couldn't listen to %s: %v", config.SERVICE_USER_PORT)
+		log.Fatalf("couldn't listen to %s: %v", config.SERVICE_USER_PORT, err)
 	}
 
 	log.Fatal(srv.Serve(l))
